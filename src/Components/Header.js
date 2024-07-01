@@ -55,20 +55,20 @@ const Header = () => {
                         <div className="menu-items">
                             <Text>Contact</Text>
 
-                            <Anchor href="mailto:example@mail.com">
-                                example@mail.com
+                            <Anchor href="mailto:chohangurjot7@gmail.com">
+                                chohangurjot7@gmail.com
                             </Anchor>
                         </div>
 
-                        <Code color="yellow" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 15 }}>
-                            Template made by
-                            <Anchor href="https://github.com/Giuseppetm">
+                        <Code color="bblue" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 15 }}>
+                            Made By:
+                            <Anchor href="https://github.com/GurjotChohan">
                                 <UnstyledButton>
                                     <Group>
-                                        <Avatar size={40} color="orange">GDC</Avatar>
+                                        <Avatar size={40} color="bblue">GC</Avatar>
                                         <div>
-                                            <Text>Giuseppetm</Text>
-                                            <Text size="xs" color="dimmed">giuseppe.delcampo@outlook.com</Text>
+                                            <Text>Gurjot Chohan</Text>
+                                            <Text size="xs" color="dimmed">chohangurjot7@gmail.com</Text>
                                         </div>
                                     </Group>
                                 </UnstyledButton>

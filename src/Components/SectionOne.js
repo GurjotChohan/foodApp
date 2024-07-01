@@ -129,7 +129,7 @@ const SectionOne = () => {
                         { label: 'drink', value: 'drink' }]}
                 />
 
-                <NativeSelect label="Diet Restrictions"
+                <NativeSelect label="Diet"
                     className='input2'
                     value={value2}
                     radius="s"
