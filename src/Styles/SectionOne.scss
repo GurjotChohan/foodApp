@@ -1,0 +1,40 @@
+#Pantry {
+    
+    h2,h3 { margin: 0; padding: 0 }
+
+    .input{
+        padding-bottom: 2dvw;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2dvw;
+        text-align: center;
+        align-items:last baseline; 
+        background-color: rgba(#90bba6, .4);
+        padding: 10px;
+        border-radius: 2dvh;
+        column-gap: 15px;
+
+    }
+        .input1, .input2, .input3, .input4{
+            flex-grow: 1; 
+        }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 2dvw;
+    }
+    
+    @media only screen and (max-width: 769px) {
+        .mantine-Carousel-root {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
