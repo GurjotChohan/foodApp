@@ -34,7 +34,7 @@ const About = () => {
                             <Button color="sienna.4" rightIcon={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">Start Here</Button>
                         </Link>
 
-                        <Link to="section-five" smooth duration={500}>
+                        <Link to="section-three" smooth duration={500}>
                         <Button variant="default" olor="sienna.4" radius="lg" size="md">Questions?</Button>
                         </Link>
                     </div>
