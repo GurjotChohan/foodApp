@@ -16,8 +16,8 @@ const Header = () => {
                 </div>
                 <div className="navbar">
                     <div className="navbar-item"><Link to="Pantry" smooth duration={500}>Pantry</Link></div>
-                    <div className="navbar-item"><Link to="section-four" smooth duration={500}>Recipes</Link></div>
-                    <div className="navbar-item"><Link to="section-five" smooth duration={500}>FAQS</Link></div>
+                    <div className="navbar-item"><Link to="section-two" smooth duration={500}>Recipes</Link></div>
+                    <div className="navbar-item"><Link to="section-three" smooth duration={500}>FAQS</Link></div>
 
                     <Button color="bblue" onClick={() => redirectToLink('https://github.com/GurjotChohan')}>Other Projects</Button>
                 </div>
@@ -48,8 +48,8 @@ const Header = () => {
                     <div className="menu">
                         <div className="menu-items">
                             <div className="menu-item"><Link to="Pantry" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Pantry</Title></Link></div>
-                            <div className="menu-item"><Link to="section-four" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Recipes</Title></Link></div>
-                            <div className="menu-item"><Link to="section-five" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>FAQs</Title></Link></div>
+                            <div className="menu-item"><Link to="section-two" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>Recipes</Title></Link></div>
+                            <div className="menu-item"><Link to="section-three" smooth duration={500} onClick={() => setOpened(false)}><Title order={2}>FAQs</Title></Link></div>
                         </div>
 
                         <div className="menu-items">

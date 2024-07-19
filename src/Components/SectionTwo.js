@@ -1,11 +1,11 @@
 import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group } from '@mantine/core';
 import { Context } from "./Context";
 import React, { useContext } from "react";
-const SectionFour = () => {
+const SectionTwo = () => {
     const theme = useMantineTheme();
     const { items, setItems } = useContext(Context);
     return (
-        <section id="section-four">
+        <section id="section-two">
             <Container>
                 <Text color="black" align="center">
                     <Title color='bblue.7' order={1} mb="15px" p='15px'>Recipes Results</Title>
@@ -13,7 +13,7 @@ const SectionFour = () => {
 
                 <Grid>
                 {items.map(recipe => {
-                return <Grid.Col xs={12} sm={4} md={4} lg={4}>
+                return <Grid.Col xs={12} sm={4} md={4} lg={4} key={recipe.id}>
                         <Card shadow="sm" p="lg" style={{ height: '100%'}}>
                             <Card.Section>
                                 <Image src={recipe.image} alt={'sample1'} />
@@ -30,7 +30,6 @@ const SectionFour = () => {
                                     Ingredients missing: {recipe.missedIngredientCount}
                                 </Badge>
                             </Group>
-                
                             <Button  color="bblue" fullWidth mt="14px" 
                                     onClick={() => {window.open(recipe.sourceUrl, "_blank")}}
                             >
@@ -49,4 +48,4 @@ const SectionFour = () => {
     );
 };
 
-export default SectionFour;
+export default SectionTwo;

@@ -2,11 +2,11 @@ import { Accordion, Text, Container, Title, Badge } from '@mantine/core';
 import { MdOutlineWeb,  MdFastfood} from "react-icons/md";
 import { SiFastapi } from "react-icons/si";
 
-const SectionFive = () => {
+const SectionThree = () => {
     //const theme = useMantineTheme();
 
     return (
-        <section id="section-five">
+        <section id="section-three">
             <Container>
                 <div style={{ marginBottom: 30 }}>
                     <div style={{ textAlign: 'left' }}><Badge variant="filled" color="sienna.4">FAQs</Badge></div>
@@ -43,4 +43,4 @@ const SectionFive = () => {
 
 };
 
-export default SectionFive;
+export default SectionThree;

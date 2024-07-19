@@ -1,12 +1,11 @@
-
 import { Text, Container, useMantineTheme, Title, Input, NativeSelect, Tooltip, Chip} from '@mantine/core';
 import '../Styles/SectionOne.scss';
-import { MdOutlineArrowDownward } from 'react-icons/md';
 import { useState, useContext, useEffect} from 'react';
 import Axios from "axios";
-import {Button,rem, Group} from '@mantine/core';
+import {Button} from '@mantine/core';
 import { getHotkeyHandler } from '@mantine/hooks';
 import { Context } from "./Context";
+
 
 const SectionOne = () => {
     const theme = useMantineTheme();
@@ -25,27 +24,22 @@ const SectionOne = () => {
     
     useEffect(() => {
         var commaSeparated = ingArray.map(String).join(',');
-        console.log(commaSeparated); 
         setingstr(commaSeparated);
         
       }, [ingArray]);
     
     useEffect(() => {
-        console.log(ingliststring);
         showrecpies();
-        console.log(url2); 
       }, [ingliststring, value, value2, value3, value4, checked]);
     
     async function checkInput() {
         if(ing !== ""){
             var result = await Axios.get(url);
-            console.log(result);
             const data = result.data.inginfo;
             seting(ing.trim());
             seting(ing.toLowerCase());
-            console.log(ing);
             if(data.length === 0){
-                alert("Not an Ingetirent");
+                alert("Not an Ingredient");
             }
             else{
                 if (ingArray.includes(ing))
@@ -74,10 +68,8 @@ const SectionOne = () => {
 
       async function showrecpies() {
         var result = await Axios.get(url2);
-        console.log(result);
         const data = Array.from(result.data.recipeURL);
         setItems(data);
-        console.log(value2);
         return;
       }
 
@@ -93,7 +85,6 @@ const SectionOne = () => {
                 </Text>
                 <Input className='input'
                         type='sumbit' 
-                        leftSection={<MdOutlineArrowDownward size={20} color='black'/>}  
                         variant="default" 
                         size="lg" 
                         radius="lg" 
@@ -178,8 +169,8 @@ const SectionOne = () => {
                     <div className='buttons'>
                         { ingArray.map(ing =>(
                             <Button 
+                            key={ing}
                             variant="default" radius="lg" size="md"
-                            rightSection={<MdOutlineArrowDownward size={20} color='black'/>}
                             onClick={() => {seting(""); setingArray(ingArray.filter(a => a !== ing));}}
                             >
                             {ing}{' '}
@@ -188,6 +179,10 @@ const SectionOne = () => {
                         ))
                         }
                     </div>
+
+                <Text color="bblue.7" align="center" mb="15px">
+                    <Title order={5}>*click the ingredient to remove*</Title>
+                </Text>
 
             </Container>
         </section>

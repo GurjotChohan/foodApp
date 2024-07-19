@@ -1,7 +1,7 @@
 import About from "../Components/About";
 import SectionOne from '../Components/SectionOne';
-import SectionFour from '../Components/SectionFour';
-import SectionFive from '../Components/SectionFive';
+import SectionThree from '../Components/SectionThree';
+import SectionTwo from '../Components/SectionTwo';
 import '../Styles/Content.scss';
 
 const Content = () => {
@@ -9,8 +9,8 @@ const Content = () => {
         <>
             <About />
             <SectionOne />
-            <SectionFour />
-            <SectionFive />
+            <SectionTwo />
+            <SectionThree />
         </>
     )
 };
