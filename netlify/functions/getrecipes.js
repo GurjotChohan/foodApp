@@ -31,7 +31,6 @@ async function handler(event, context) {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error }),
     };
   }
 }
